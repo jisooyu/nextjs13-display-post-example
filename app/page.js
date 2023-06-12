@@ -4,9 +4,9 @@ export default function Home() {
 
   return (
     <div >
-      <main >
-        <h1 className='m-4'>Authentication in Next.js app using Next-Auth</h1>
-        <p className="desc text-center">
+      <main  className='feed'>
+        <h1>Authentication of Next.js using Next-Auth</h1>
+        <p>
           Next JS Posts Display
         </p>
         <Feed />

@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
+import useSWR from 'swr'
 import PromptCard from "./PromptCard";
+
+// using SWR doc, https://swr.vercel.app/docs/getting-started
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 const PromptCardList = ({ data }) => {
   return (
@@ -18,22 +20,15 @@ const PromptCardList = ({ data }) => {
 };
 
 const Feed = () => {
-  const [allPosts, setAllPosts] = useState([]);
 
-  const fetchPosts = async () => {
-    const response = await fetch("/api/prompt");
-    const data = await response.json();
-    setAllPosts(data);
-  };
-
-  useEffect(() => {
-    fetchPosts();
-  },[]);
+  const {data, error} = useSWR('api/prompt', fetcher)
+  if (error) return <div>Failed to load</div>
+  if (!data) return <div>Loading...</div>
 
   return (
     <section className='feed'>
       <h1>Posts from Users</h1>
-        <PromptCardList data={allPosts} />
+        <PromptCardList data={data} />
     </section>
   );
 };

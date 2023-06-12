@@ -52,7 +52,8 @@
 
 .main:after {
   content: "";
-  background-image: url("/assets/images/grid.svg");
+  background-image: url("/cross_necklace.jpg");
+
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -62,7 +63,7 @@
   filter: invert(1);
 }
 
-.gradient {
+ .gradient {
   height: fit-content;
   z-index: 3;
   width: 100%;
@@ -85,9 +86,9 @@
   filter: blur(100px) saturate(150%);
   top: 80px;
   opacity: 0.15;
-}
+} 
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .main {
     padding: 0;
   }
@@ -96,7 +97,11 @@
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+  @apply relative z-10 flex justify-center items-center flex-col  sm:px-16;
+}
+
+.nav_header {
+    @apply  relative flex-between justify-center items-center flex-col w-full mx-auto p-3 bg-slate-50 hover:bg-slate-100 sm:flex-row;
 }
 
 .black_btn {
@@ -112,7 +117,7 @@
 }
 
 .head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+  @apply mt-5 text-xl font-extrabold leading-[1.15] text-black sm:text-3xl;
 }
 
 .orange_gradient {
