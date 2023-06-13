@@ -16,15 +16,15 @@
   }
 }
 
-/* body {
+body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
-}  */
+    rgb(var(--background-start-rgb)); */
+} 
 
 /* 
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
@@ -97,11 +97,11 @@
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col  sm:px-16;
+  @apply relative z-10 flex justify-center items-center flex-col;
 }
 
 .nav_header {
-    @apply  relative flex-between justify-center items-center flex-col w-full mx-auto p-3 bg-slate-50 hover:bg-slate-100 sm:flex-row;
+    @apply  relative flex-between justify-center items-center flex-col w-full mx-auto p-3 bg-black hover:bg-slate-600 sm:flex-row;
 }
 
 .black_btn {
@@ -109,7 +109,7 @@
 }
 
 .blue_btn {
-  @apply rounded-full border border-blue-400 bg-blue-500 py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm flex items-center justify-center;
+  @apply rounded-full border border-blue-400 bg-blue-500 py-1.5 px-5 mx-5 text-white  hover:bg-white hover:text-black text-center text-sm items-center justify-center;
 }
 
 .outline_btn {
@@ -133,7 +133,7 @@
 }
 
 .desc {
-  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+  @apply mt-5 text-lg  sm:text-xl max-w-2xl;
 }
 
 .search_input {
@@ -181,7 +181,7 @@
 
 /* PromptCard Component */
 .prompt_card {
-  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding mx-auto p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
 }
 
 .flex-center {

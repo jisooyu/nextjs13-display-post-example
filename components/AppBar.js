@@ -16,30 +16,29 @@ const AppBar = () => {
     }, []);
   return (  
     <nav className='nav_header'>
-        <Link className="flex gap-2 flex-center text-sky-800 hover:text-sky-900" href="/">
+        <Link className="flex gap-2 flex-center text-slate-100 hover:text-sky-400" href="/">
           Home
         </Link>
-        <Link className="text-sky-800 hover:text-sky-900" href="/admin/panel">
+        <Link className="text-slate-100 hover:text-sky-400" href="/admin/panel">
           Panel
         </Link>
       {/* Desktop Navigation */}
-        <div  className='sm:flex hidden'>
+        <>
         {session ? (
-            <div className="flex gap-3 md:gap-5 text-sky-800 hover:text-sky-900">
-                <Link href='/create-prompt' className='blue_btn'>Create Prompt</Link>
-                <button type="button" onClick={signOut} className="text-sky-800 hover:text-sky-900" >
+            <div className="flex text-slate-100 hover:text-sky-400">
+                <Link href='/create-prompt' className='hidden sm:block blue_btn' >Create Prompt</Link>
+                <button type="button" onClick={signOut} className="text-slate-100 hover:text-sky-400" >
                   Sign out
                 </button>
-
             </div>
             ): (
           <>
             {
-              <p className='text-sky-600 hover:text-sky-700' onClick={()=>signIn()}>Sign In</p>
+              <p className='text-slate-100 hover:text-sky-400' onClick={()=>signIn()}>Sign In</p>
             }
             </>
           )}
-          </div>
+          </>
       </nav>
   )
 }
