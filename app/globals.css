@@ -101,7 +101,7 @@ body {
 }
 
 .nav_header {
-    @apply  relative flex-between justify-center items-center flex-col w-full mx-auto p-3 bg-black hover:bg-slate-600 sm:flex-row;
+    @apply  relative flex-between justify-center items-center flex-col sm:flex-row w-full mx-auto p-3 bg-blue-950 hover:bg-slate-600 ;
 }
 
 .black_btn {

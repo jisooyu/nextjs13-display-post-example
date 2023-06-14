@@ -19,21 +19,21 @@ const PromptCard = ({ post, handleEdit, handleDelete }) => {
     <div className="prompt_card">
       <div className="flex justify-between items-start gap-5">
         <div className="flex-1 flex justify-start items-center gap-3 coursor-pointer" onClick={handleProfileClick}>
-          <Image
-            src={post.creator.image}
-            alt='user_image'
-            width={40}
-            height={40}
-            className='rounded-full object-contain'
-          />
-          <div className="flex flex-col">
-            <h3 className="font-satoshi font-semibold text-blue-600">{post.creator.username}</h3>
-            <p className="font-inter text-sm text-blue-600">{ post.creator.email}</p>
-          </div>
+            <Image
+              src={post.creator.image}
+              alt='user_image'
+              width={40}
+              height={40}
+              className='rounded-full object-contain'
+            />
+            <div className="flex flex-col cursor-pointer">
+              <h3 className="font-satoshi font-semibold text-blue-900">{post.creator.username}</h3>
+              <p className="font-inter text-sm text-blue-900">{ post.creator.email}</p>
+            </div>
         </div>
       </div>
-      <p className="my-4 font-satoshi text-sm text-blue-600">{post.prompt}</p>
-      <p className="font-inter text-sm blue-gradient cursor-pointer text-blue-600"
+      <p className="my-4 font-satoshi text-sm text-blue-900">{post.prompt}</p>
+      <p className="font-inter text-sm blue-gradient cursor-pointer text-blue-900"
       >#{post.tag}</p>
       {session?.user.id === post.creator._id && pathName === "/profile" && (
         <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
